@@ -12,11 +12,14 @@ public class PerformActions extends DriverSetup{
     @Test
     public void testActions() throws InterruptedException {
 
+
+        //Hover test...........
         driver.get("https://demoqa.com/menu#");
         WebElement mainItem = driver.findElement(By.xpath("//a[normalize-space()='Main Item 2']"));
         Actions action = new Actions(driver);
         action.clickAndHold(mainItem).build().perform();
         Thread.sleep(3000);
+
 
         /*driver.findElement(By.xpath("//a[normalize-space()='SUB SUB LIST »']")).click();
         Thread.sleep(3000);*/
